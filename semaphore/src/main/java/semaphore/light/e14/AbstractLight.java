@@ -1,6 +1,9 @@
-package semaphore.light;
+package semaphore.light.e14;
 
-public class SimpleLight implements Light {
+import semaphore.light.Light;
+import semaphore.light.Light.OnOff;
+
+public class AbstractLight implements Light {
 
 	private OnOff state = OnOff.OFF;
 	
