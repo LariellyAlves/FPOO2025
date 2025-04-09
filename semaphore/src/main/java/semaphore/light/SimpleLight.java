@@ -6,26 +6,29 @@ public class SimpleLight implements Light {
 	
 	@Override
 	public void turnOn() {
+		this.state = OnOff.ON;
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void turnOff() {
+		this.state = OnOff.OFF;
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public boolean isOn() {
+		return this.state == OnOff.ON;
 		// TODO Auto-generated method stub
-		return false;
+		
 	}
 
 	@Override
 	public boolean isOff() {
 		// TODO Auto-generated method stub
-		return false;
+		return this.state == OnOff.OFF;
 	}
 
 }
