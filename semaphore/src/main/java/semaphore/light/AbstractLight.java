@@ -1,6 +1,5 @@
-package semaphore.light.e14;
+package semaphore.light;
 
-import semaphore.light.Light;
 import semaphore.light.Light.OnOff;
 
 public class AbstractLight implements Light {
