@@ -1,11 +1,7 @@
 package semaphore.light;
+import semaphore.util.TurnOnOff;
 
-public interface Light {
-	enum OnOff {ON, OFF}
-	
-	void turnOn();
-	void turnOff();
-	
-	boolean isOn();
-	boolean isOff();
+public interface Light extends TurnOnOff {
+	//nothing for while
+
 }

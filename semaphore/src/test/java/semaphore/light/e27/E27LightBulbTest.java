@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-import semaphore.light.Light;
+import semaphore.util.TurnOnOff;
 
 
 class E27LightBulbTest {
@@ -13,7 +13,7 @@ class E27LightBulbTest {
 	void shouldTurnOn() { 
 		
 		//given
-		Light light = new E27LightBulb();
+		TurnOnOff light = new E27LightBulb();
 		
 	
 		
