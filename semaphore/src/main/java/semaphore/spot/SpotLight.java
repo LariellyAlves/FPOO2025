@@ -4,7 +4,7 @@ import java.awt.Image;
 import java.awt.Point;
 
 import semaphore.light.Light;
-import semaphore.light.e27.AbstratcLightE27;
+import semaphore.light.e27.AbstractLightE27;
 import semaphore.util.*;
 
 public class SpotLight implements TurnOnOff {
@@ -21,7 +21,7 @@ public class SpotLight implements TurnOnOff {
 		this.mask = mask;
 	}
 	
-	public void setLight(AbstratcLightE27 light) {
+	public void setLight(AbstractLightE27 light) {
 		this.light = light;
 	}
 	
