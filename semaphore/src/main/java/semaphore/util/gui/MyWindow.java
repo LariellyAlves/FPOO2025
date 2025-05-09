@@ -11,6 +11,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
+import semaphore.trafficLight.simple.SimpleTrafficLight;
+
 public class MyWindow {
 	
 	JFrame frame = new JFrame();
@@ -65,8 +67,9 @@ public class MyWindow {
 		
 		configureRepaint();
 	}
-	public void add(Paintable paintable) {
-		this.panel.add(paintable);
+	
+	public void add(Paintable defaultOne) {
+		this.panel.add(defaultOne);
 	}
 	
 	public void remove(Paintable paintable) {
