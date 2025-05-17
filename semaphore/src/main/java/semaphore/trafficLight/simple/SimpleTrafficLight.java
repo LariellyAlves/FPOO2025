@@ -9,11 +9,13 @@ import java.net.URL;
 
 import javax.imageio.ImageIO;
 
+import semaphore.TrafficLight;
 import semaphore.light.e27.E27LightBulb;
 import semaphore.spot.SpotLight;
+import semaphore.util.TurnOnOff;
 import semaphore.util.gui.Paintable;
 
-public class SimpleTrafficLight implements Paintable{
+public class SimpleTrafficLight implements Paintable, TrafficLight{
 
 	private Point position = new Point(0 ,0);
 	private Dimension dimension = new Dimension(70, 180);
@@ -112,16 +114,14 @@ public class SimpleTrafficLight implements Paintable{
 		this.create();
 		this.configurePositions();
 	}
-
-	
 	
 	
 	public SimpleTrafficLight(Point position , Dimension dimension) throws IOException {
-		this.setDimension(dimension);
-		this.setPosition(position);
 		
 		this.create();
 		this.configurePositions();
+		this.setPosition(position);
+		this.setDimension(dimension);
 	}
 	
 	
@@ -147,6 +147,24 @@ public class SimpleTrafficLight implements Paintable{
 	
 	public Dimension getDimension() {
 		return new Dimension (this.dimension);
+	}
+
+	@Override
+	public TurnOnOff spotGreen() {
+		
+		return this.green;
+	}
+
+	@Override
+	public TurnOnOff spotYellow() {
+	
+		return this.yellow;
+	}
+
+	@Override
+	public TurnOnOff spotRed() {
+		
+		return this.red;
 	}
 }
 	
