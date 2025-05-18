@@ -42,7 +42,7 @@ public class SimpleTrafficLightControl implements TrafficLightControl {
 		if (state == State.ALERT)
 			stopAlert();
 		
-		green.turnOff(); //atribuindo OFF para a green
+		green.turnOff(); 
 		red.turnOff();
 		yellow.turnOff();
 		
