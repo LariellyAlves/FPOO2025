@@ -19,7 +19,7 @@ import semaphore.util.TurnOnOff.OnOff;
 		private LocalTime alertStart = LocalTime.of(0,0);
 		private LocalTime alertEnd = LocalTime.of(5,30);
 		
-		private OnOff state = OnOff.OFF;
+		private OnOff state;
 		
 		
 		
@@ -104,13 +104,16 @@ import semaphore.util.TurnOnOff.OnOff;
 		
 		@Override
 		public void turnOn() {
-			// TODO Auto-generated method stub
+			
+			state = OnOff.ON;
+			run();
 			
 		}
 
 		@Override
 		public void turnOff() {
-			// TODO Auto-generated method stub
+			
+			state = OnOff.OFF;
 			
 		}
 
@@ -146,8 +149,9 @@ import semaphore.util.TurnOnOff.OnOff;
 
 		@Override
 		public void setAlertPeriod(LocalTime start, LocalTime end) {
-			// TODO Auto-generated method stub
-			
+
+			alertStart = start;
+			alertEnd = end;
 		}
 		
 	}

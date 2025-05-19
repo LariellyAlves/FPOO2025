@@ -60,14 +60,14 @@ public class SimpleTrafficLight implements Paintable, TrafficLight{
 		URL url;
 		
 		url = getClass().getResource(path + color + "On.png");
+		Image maskOn = ImageIO.read(url);
 		
 		url = getClass().getResource( path + color + "Off.png");
+		Image maskOff = ImageIO.read(url);
 		
-		
-		Image maskOn = null;
-		Image maskOff = null;
 		SpotLight spot = new SpotLight(maskOn, maskOff);
-		 return spot;
+		return spot;
+		
 	}
 	
 	
